@@ -2,10 +2,7 @@
 /*#### Galeria de imágenes con CSS Grid HTML y CSS 
 by Github.com/DanielDesign 
 and shared by Blogspot.owinile.com ####*/
-
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
 
 .grid{
   display: grid;
