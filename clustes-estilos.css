@@ -1,0 +1,92 @@
+
+/*#### Galeria de imágenes con CSS Grid HTML y CSS 
+by Github.com/DanielDesign 
+and shared by Blogspot.owinile.com ####*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.d-none{
+  display: none;
+}
+
+.p-relative{
+  position: relative;
+}
+
+.grid .item-grid .p-relative{
+  height: 85%;
+}
+
+.grid .item-grid .p-relative > div:first-child{
+  height: 100%;
+}
+
+.grid .item-grid .p-relative > div > img{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.grid .p-relative > div:first-child::before{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  transition: background-color 1s ease-in-out;
+  z-index: 1;
+}
+
+.grid .p-relative > div:first-child:hover::before{
+  background-color: rgba(0,0,0,0.4);
+}
+
+.grid .p-relative > div:first-child:hover + .content-icon,.content-icon:hover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 7%;
+  right: 5%;
+  font-size: 17px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: white;
+  z-index: 100;
+}
+
+.grid .item-grid > a{
+  display: block;
+  padding-top: 15px;
+  font-weight: 700;
+  padding-left: 20px;
+  height: 15%;
+}
+
+@media only screen and (max-width: 769px){
+  .grid{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+}
+
+@media only screen and (max-width: 536px){
+  .grid{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+}
